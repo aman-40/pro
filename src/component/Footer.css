@@ -1,0 +1,19 @@
+#footer{
+    height: 10vh;
+    width: 100%;
+    background-color: rgb(60,60,60);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 8% ;
+    color: white;
+}
+
+#footer .reserve{
+    width: 70%;
+    font-size: 1.5vw;
+}
+
+#footer h2{
+    font-size: 1.3vw;
+}

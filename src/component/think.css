@@ -1,0 +1,127 @@
+.think-container {
+    display: flex;
+    flex-direction: column;
+    background-color: #f9f9f9;
+    height: 35vh;
+    width: 100%;
+    font-family:  "Inconsolata", serif, serif;
+    justify-content: flex-end;
+    align-items: flex-start;
+    line-height: .8;
+    padding-left: 5%;
+  }
+  
+  .think-container .title {
+    display: flex;
+
+    font-size: 18vh;
+    font-weight: 500;
+    /* background-color: red; */
+    width: 60%;
+    animation: showWritten2 both;
+    animation-timeline: view(70% 10%);
+    
+  }
+
+  @keyframes showWritten2 {
+    from{
+      opacity: 0;
+      transform: translateX(-200px);
+    }  
+    to{
+      opacity: 1;
+      transform: translateX(0);
+    }  
+  }
+
+  .think-container .titleflex{
+    display: flex;
+    align-items: first baseline;
+    gap: 8%;
+  }
+  
+  .subtitle {
+    font-size: 2rem;
+    font-weight: 600;
+    animation: showWritten3 both;
+    animation-timeline: view(70% 10%);
+  }
+
+  @keyframes showWritten3 {
+    from{
+      opacity: 0;
+      transform: translateX(500px);
+    }  
+    to{
+      opacity: 1;
+      transform: translateX(0);
+    }  
+  }
+  
+  .think-card {
+    display: flex;
+    flex-direction: column;
+    background-color: #f9f9f9;
+    height: 100vh;
+    width: 100%;
+    font-family:  "Inconsolata", serif, serif;
+    justify-content: center;
+    align-items: center;
+    line-height: .8;
+    /* background-color: red; */
+  }
+
+  .think-card .process-cards {
+    /* background-color: aqua; */
+
+    /* display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap; */
+    /* background-color: red; */
+    height: 90%;
+    width: 70%;
+    border-top: 0;
+    border-left: 5px solid black;
+    border-right: 5px solid black;
+    border-bottom: 0;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    border-radius: 50px ;
+    grid-template-columns: repeat(3, 1fr);
+    /* gap: 5%; */
+}
+
+.think-card .process-cards .card {
+      height: 400px;
+      width: 350px;
+    background: white;
+    /* background-color: red; */
+    border: 2px solid black;
+    padding: 20px;
+    width: 300px;
+    /* text-align: left; */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  
+  .think-card .process-cards .card h2 {
+    font-size: 3.5vh;
+    font-weight: bold;
+    color: #5c5b5b;
+    margin-bottom: 3%;
+}
+
+.think-card .process-cards .card h2 span {
+      font-weight: bold;
+      color: black;
+  }
+  
+  .think-card .process-cards .card p {
+    font-size: 2vh;
+    line-height: 1;
+    color: #333;
+  }
+  

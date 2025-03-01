@@ -1,0 +1,52 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap'); */
+
+.about-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: 100vh;
+  width: 100%;
+  padding-left: 10vw;
+  background-color: white;
+  font-family: "Inconsolata", serif, serif;
+  border-bottom: 5px dashed black;
+}
+
+.about-container .about-content {
+  color: black;
+}
+
+.about-container .about-content .about-title {
+  font-size: 18vh;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  opacity: 0.4;
+  border-bottom: 4px solid black;
+  animation: showWritten both;
+  animation-timeline: view();
+}
+
+.about-container .about-content .about-title strong {
+    font-size: 30vh;
+    font-weight: 800;
+    margin-bottom: 10px;
+    opacity: 0.8;
+  }
+
+.about-container .about-content .about-text {
+  font-size: 5.5vh;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+@keyframes showWritten {
+  from{
+    opacity: 0;
+    transform: translateX(-200px);
+  }  
+  to{
+    opacity: 1;
+    transform: translateX(0);
+  }  
+}

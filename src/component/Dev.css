@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Sixtyfour+Convergence:SCAN@-10&family=Tiny5&display=swap');
+
+#dev{
+    height: 40vh;
+    width: 100%;
+    background-color: rgb(60, 60, 60);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    font-family: "Roboto Mono", monospace;
+    padding: 0 8%;
+    padding-top: 2%;
+}
+
+.circle-icon{
+    color: rgb(255, 255, 255);
+
+}
+
+#dev #contact{
+    height: 100%;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 5%;
+    border-bottom: 2px solid white;
+}
+
+#dev #contact h2{
+    font-size: 2vw;
+    font-weight: bold;
+    color: white;
+}
+
+#dev #contact h3{
+    font-size: 1.3vw;
+    font-weight: 400;
+    color: rgb(200, 200, 200);
+}
+
+#dev #contact #social{
+    display: flex;
+    gap: 5%;
+    font-size: 2vw;
+    margin-top: 5%;
+}
+
+#dev #link{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 2px solid white;
+    gap: 5%;
+}
+
+#dev #link h2{
+    font-size: 2vw;
+    font-weight: bold;
+    color: white;
+}
+
+#dev #link h3{
+    font-size: 1.3vw;
+    font-weight: 400;
+    color: rgb(200, 200, 200);
+}
+
+#dev #mess{
+    padding-left: 5%;
+    width: 40%;
+    height: 100%;
+    border-bottom: 2px solid white;
+}
+
+#dev #mess #developer{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8%;
+}
+
+#dev #mess #developer #nameplate{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2%;
+
+}
+
+#dev #mess #developer #nameplate #pic{
+    height: 70px;
+    width: 70px;
+    background-color: white;
+    border-radius: 50%;
+    filter: grayscale(100%);
+    background-size: cover;
+    
+}
+
+#dev #mess #developer #nameplate h2{
+    font-size: 2vw;
+    line-height: 25px;
+    color: white;
+
+}
+
+#dev #mess #developer #nameplate h2 #namep{
+    font-size: 1vw;
+    color: rgb(200,200,200);
+}
+
+#dev #mess #developer #review{
+    color: rgb(200, 200, 200);
+}
+
+#dev #mess #developer #review h3{
+    font-size: 1.3vw;
+    font-weight: 400;
+}
+
+#dev #mess #developer #review h3 .bold{
+    font-weight: 800;
+    color: white;
+}
+
+#dev #mess #developer #interact{
+    display: flex;
+    flex-direction: row;
+    gap: 2.5%;
+}
+
+#dev #mess #developer #interact #messanger{
+    height: 3vw;
+    width: 60%;
+    border-radius: 10px;
+    background-color: rgb(236, 236, 236);
+    border: none;
+    font-size: 1.5vw;
+    text-align: center
+}
+
+#dev #mess #developer #interact #sub{
+    height: 3vw;
+    width: 20%;
+    border-radius: 10px;
+    font-size: 1.5vw;
+    font-weight: 600;
+    border: none;
+    background-color: #319F43;
+    color: white;
+}

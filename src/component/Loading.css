@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Inconsolata:wght@200..900&display=swap');
+
+#loading {
+    /* background-color: red; */
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+#loading .terminal {
+    /* background-color: red; */
+    color: #46ff50;
+    font-size: 20px;
+    height: 30%;
+    width: 30%;
+    padding: 20px;
+    border-radius: 5px;
+    /* width: fit-content; */
+    white-space: pre-wrap;
+    font-family: "Inconsolata", serif;
+
+}
+
+.username {
+    color: red;
+    font-family: "Inconsolata", serif;
+
+}
+
+.cursor {
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+#loading #bCircle {
+    /* background-color: white; */
+    height: 30%;
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #46ff50;
+    font-size: 100px;
+    
+    
+}
+
+#loading #sCircle {
+    /* background-color: blue; */
+    height: 70%;
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes antiRotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(-360deg);
+    }
+}
+
+/* #circle1 { top: 0; left: 50%; transform: translateX(-50%); }
+#circle2 { top: 15%; left: 85%; }
+#circle3 { top: 50%; left: 100%; transform: translateY(-50%); }
+#circle4 { top: 85%; left: 85%; }
+#circle5 { top: 100%; left: 50%; transform: translate(-50%, -100%); }
+#circle6 { top: 85%; left: 15%; }
+#circle7 { top: 50%; left: 0; transform: translateY(-50%); }
+#circle8 { top: 15%; left: 15%; } */
+
+#loading #sCircle #circle1 {
+    height: 100%;
+    width: 50%;
+    border: 15px solid #46ff50;
+    border-radius: 50%;
+    position: absolute;
+    box-shadow: 0 0 30px #46ff50;
+    animation: rotate 5s linear infinite;
+}
+
+#loading #sCircle #circle2 {
+    height: 90%;
+    width: 45%;
+    border: 15px dashed #46ff50;
+    border-radius: 50%;
+    position: absolute;
+    box-shadow: 0 0 30px #46ff50 inset;
+    animation: antiRotate 10s linear infinite;
+}
+
+#loading #sCircle #circle3 {
+    height: 80%;
+    width: 40%;
+    border: 10px double #46ff50;
+    border-radius: 50%;
+    position: absolute;
+    box-shadow: 0 0 30px #46ff50 inset;
+    animation: rotate 5s linear infinite;
+}
+
+#loading #sCircle #circle4 {
+    height: 70%;
+    width: 35%;
+    border: 50px dashed #46ff50;
+    /* Thick border */
+    border-radius: 50%;
+    position: absolute;
+    box-shadow: 0 0 30px #46ff50 outset;
+    animation: antiRotate 3s linear infinite;
+
+
+}
+
+/* #loading #sCircle #circle5 {
+    height: 60%;
+    width: 30%;
+    border: 10px inset #46ff50;
+    border-radius: 50%;
+    position: absolute;
+} */
+
+#loading #sCircle #circle6 {
+    height: 44%;
+    width: 22%;
+    border: 15px dashed #46ff50;
+    border-radius: 50%;
+    position: absolute;
+    box-shadow: 0 0 30px #46ff50;
+    animation: rotate 5s linear infinite;
+
+}
+
+#loading #sCircle #circle7 {
+    height: 35%;
+    width: 17.5%;
+    border: 5px dotted #46ff50;
+    border-radius: 50%;
+    position: absolute;
+    box-shadow: 0 0 30px #46ff50;
+    animation: antiRotate 5s linear infinite;
+
+}
+
+#loading #sCircle #circle8 {
+    height: 30%;
+    width: 15%;
+    border: 30px solid #46ff50;
+    border-radius: 50%;
+    position: absolute;
+    box-shadow: 0 0 30px #46ff50 inset;
+    animation: antiRotate 5s linear infinite;
+
+}
+
+
+#loading #bar {
+    /* background-color: brown; */
+    height: 70%;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2%;
+}
+
+#loading #bar .barr {
+    height: 15%;
+    width: 96%;
+    /* background-color: white; */
+    border: 4px solid #46ff50;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 30px #46ff50;
+}
+
+.barr::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 100%;
+    background: #46ff50;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+#bar1::after {
+    width: 0%;
+    animation: fillBar1 1.5s infinite;
+}
+
+#bar2::after {
+    width: 0%;
+    animation: fillBar2 2s infinite;
+}
+
+#bar3::after {
+    width: 0%;
+    animation: fillBar3 2.5s infinite;
+}
+
+#bar4::after {
+    width: 0%;
+    animation: fillBar4 3s infinite;
+}
+
+@keyframes fillBar1 {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes fillBar2 {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes fillBar3 {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes fillBar4 {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
