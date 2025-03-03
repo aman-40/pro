@@ -5,7 +5,7 @@ const MoreProjects = () => {
   return (
     <div className="more-projects-container">
       <div className="more-projects-content">
-        <p className="more-projects-title">More Projects</p>
+        <p className="more-projects-title">More <div className='pro'>Projects</div></p>
         <ul className="projects-list">
           <a href='https://medikit-247.web.app/' target='_blank'><li className="project-item" >MEDIKIT</li></a>
           <a href='https://drinks-unfinished.web.app/' target='_blank'><li className="project-item">DRINKS</li></a>
