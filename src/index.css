@@ -16,3 +16,28 @@ html,body{
 ::-webkit-scrollbar {
   display: none;
 }
+
+:root {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+}
+
+[data-theme="dark"] {
+  --bg-color: #121212;
+  --text-color: #ffffff;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: all 0.3s ease-in-out;
+}
+
+.theme-toggle-btn {
+  padding: 8px 16px;
+  background: var(--text-color);
+  color: var(--bg-color);
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}

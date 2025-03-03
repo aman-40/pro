@@ -8,6 +8,7 @@ import Identity from './component/Identity'
 import Question from './component/Question'
 import Footer from './component/Footer'
 import Dev from './component/Dev'
+import ThemeToggle from './component/ThemeToggle'
 
 
 function App() {
