@@ -23,8 +23,8 @@
   margin-bottom: 10px;
   opacity: 0.4;
   border-bottom: 4px solid black;
-  animation: showWritten both;
-  animation-timeline: view();
+  /* animation: showWritten both;
+  animation-timeline: view(); */
 }
 
 .about-container .about-content .about-title strong {
@@ -39,7 +39,7 @@
   font-weight: 400;
   line-height: 1.4;
 }
-
+/* 
 @keyframes showWritten {
   from{
     opacity: 0;
@@ -49,4 +49,4 @@
     opacity: 1;
     transform: translateX(0);
   }  
-}
+} */

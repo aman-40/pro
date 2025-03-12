@@ -27,12 +27,12 @@
   font-weight: 600;
   letter-spacing: 1px;
   text-transform: uppercase;
-  animation: orientation both;
-  animation-timeline: view(90% 50%);
+  /* animation: orientation both;
+  animation-timeline: view(90% 50%); */
   
 }
 
-@keyframes orientation {
+/* @keyframes orientation {
   from{
     transform: translateX(-800px);
     opacity: 0;
@@ -42,7 +42,7 @@
     transform: translateX(0);
     opacity: 1;
   }
-}
+} */
 
 .more-projects-container .more-projects-content .more-projects-title .pro{
   font-size: 20vh;
@@ -61,10 +61,10 @@
   font-weight: 600;
   padding: 15px 0;
   transition: .5s all ease ;
-  animation: showCase linear both;
-  animation-timeline: view();
+  /* animation: showCase linear both;
+  animation-timeline: view(); */
 }
-@keyframes showCase {
+/* @keyframes showCase {
   0%{
     filter: blur(30px);
   }  
@@ -75,7 +75,7 @@
   100%{
     filter: blur(30px);
   }  
-}
+} */
 
 .more-projects-container .more-projects-content .projects-list .project-item:hover {
     cursor: pointer;

@@ -18,12 +18,12 @@
     font-weight: 500;
     /* background-color: red; */
     width: 60%;
-    animation: showWritten2 both;
-    animation-timeline: view(70% 10%);
+    /* animation: showWritten2 both;
+    animation-timeline: view(70% 10%); */
     
   }
 
-  @keyframes showWritten2 {
+  /* @keyframes showWritten2 {
     from{
       opacity: 0;
       transform: translateX(-200px);
@@ -32,7 +32,7 @@
       opacity: 1;
       transform: translateX(0);
     }  
-  }
+  } */
 
   .think-container .titleflex{
     display: flex;
@@ -43,11 +43,11 @@
   .subtitle {
     font-size: 2rem;
     font-weight: 600;
-    animation: showWritten3 both;
-    animation-timeline: view(70% 10%);
+    /* animation: showWritten3 both;
+    animation-timeline: view(70% 10%); */
   }
 
-  @keyframes showWritten3 {
+  /* @keyframes showWritten3 {
     from{
       opacity: 0;
       transform: translateX(500px);
@@ -56,7 +56,7 @@
       opacity: 1;
       transform: translateX(0);
     }  
-  }
+  } */
   
   .think-card {
     display: flex;
@@ -94,13 +94,12 @@
 }
 
 .think-card .process-cards .card {
-      height: 400px;
-      width: 350px;
+      height: 40vh;
+      width: 17vw;
     background: white;
     /* background-color: red; */
     border: 2px solid black;
     padding: 20px;
-    width: 300px;
     /* text-align: left; */
     display: flex;
     flex-direction: column;

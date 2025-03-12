@@ -43,6 +43,7 @@
     object-fit: cover;
     border-radius: 20px;
     /* background-color: red; */
+    /* background: url("/pro/public/aman.jpeg"); */
   }
   
   .identity .testimonial-card .testimonial-body .testimonial-text {
