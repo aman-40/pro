@@ -6,38 +6,27 @@ import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaInstagram, FaGithub, FaFacebook,
 function Dev() {
     return (
         <div id='dev'>
-            <div id="contact">
-                <h2>Contact</h2>
-                <h3><FaPhone className='circle-icon' style={{ transform: 'scaleX(-1)'}}/> +91 85210 47656</h3>
-                <h3><FaEnvelope className='circle-icon'/> kumaramankit113114@gmail.com</h3>
-                <h3><FaMapMarkerAlt className='circle-icon'/> Laxmisagar, Darbhanga, Bihar</h3>
-                <div id="social">
-                    <FaGithub className='circle-icon'/>
-                    <FaInstagram className='circle-icon'/>
-                    <FaFacebook className='circle-icon'/>
-                    <FaLinkedin className='circle-icon'/>
-                </div>
-            </div>
-            <div id="link">
-                <h2>Important Links</h2>
-                <h3>Our Team</h3>
-                <h3>Products</h3>
-                <h3>Clients</h3>
-                <h3>Blogs</h3>
-            </div>
             <div id="mess">
                 <div id="developer">
-                    <div id="nameplate">
-                        <img src='/aman.jpeg' id="pic"></img>
-                        <h2>Aman Kumar <br /><span id='namep'>Professional Web Developer</span></h2>
-                    </div>
                     <div id="review">
-                        <h3>Give <span className='bold'>review</span> or <span className='bold'>interesting ideas</span> <br />straight to my inbox.</h3>
+                        <h3>Give <span className='bold'>review</span> or <span className='bold'>interesting ideas</span> straight to my inbox.</h3>
                     </div>
+                    <input className='inputing' type='name' placeholder='Your Name'  >
+                    </input>
+                    <input className='inputing' type='email' placeholder='Your Gmail'>
+                    </input>
                     <div id="interact">
-                        <input type="text" placeholder='Enter Your Message' name="Enter Your Message" id="messanger" />
-                        <button type="submit" id='sub'>Send</button>
+                        <textarea type="text" placeholder='Enter Your Message' name="Enter Your Message" id="messanger" />
                     </div>
+                    <button type="submit" id='sub'>Send</button>
+                </div>
+            </div>
+            <div id="contact">
+                <div id="social">
+                    <FaGithub className='circle-icon github' />
+                    <FaInstagram className='circle-icon insta' />
+                    <FaFacebook className='circle-icon fb' />
+                    <FaLinkedin className='circle-icon ld' />
                 </div>
             </div>
         </div>

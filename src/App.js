@@ -23,7 +23,7 @@ function App() {
     <Identity></Identity>
     <Question></Question>
     <Dev></Dev>
-    <Footer></Footer>    
+    {/* <Footer></Footer>     */}
     </>
   )
 }

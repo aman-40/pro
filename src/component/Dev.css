@@ -2,153 +2,162 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Sixtyfour+Convergence:SCAN@-10&family=Tiny5&display=swap');
 
 #dev{
-    height: 40vh;
+    height: 55vh;
+    border-top: 5px dashed black;
     width: 100%;
-    background-color: rgb(60, 60, 60);
+    background-color: rgb(255, 255, 255);
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
     font-family: "Roboto Mono", monospace;
-    padding: 0 8%;
-    padding-top: 2%;
+    /* padding-bottom: 5px; */
 }
 
 .circle-icon{
-    color: rgb(255, 255, 255);
+    color: rgb(0,0,0);
+    transition:all ease .5s;
 
+}
+
+.fb:hover{
+    color: #1877F2;
+    scale: 1.1;
+    transition:all ease .5s;
+    cursor: pointer;
+}
+
+.github:hover{
+    color: #181717;
+    scale: 1.1;
+    transition:all ease .5s;
+    cursor: pointer;
+}
+
+.ld:hover{
+    color: #0077B5;
+    scale: 1.1;
+    transition:all ease .5s;
+    cursor: pointer;
+}
+
+.insta:hover{
+    color: #E4405F;
+    scale: 1.1;
+    transition:all ease .5s;
+    cursor: pointer;
+    
 }
 
 #dev #contact{
-    height: 100%;
+    height: 10%;
     width: 40%;
     display: flex;
-    flex-direction: column;
-    gap: 5%;
-    border-bottom: 2px solid white;
-}
-
-#dev #contact h2{
-    font-size: 2vw;
-    font-weight: bold;
-    color: white;
-}
-
-#dev #contact h3{
-    font-size: 1.3vw;
-    font-weight: 400;
-    color: rgb(200, 200, 200);
+    justify-content: center;
+    align-items: flex-start;
+    /* background-color: red; */
 }
 
 #dev #contact #social{
     display: flex;
-    gap: 5%;
-    font-size: 2vw;
-    margin-top: 5%;
-}
-
-#dev #link{
-    width: 30%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    border-bottom: 2px solid white;
-    gap: 5%;
-}
-
-#dev #link h2{
-    font-size: 2vw;
-    font-weight: bold;
-    color: white;
-}
-
-#dev #link h3{
-    font-size: 1.3vw;
-    font-weight: 400;
-    color: rgb(200, 200, 200);
+    gap: 10%;
+    font-size: 3vw;
 }
 
 #dev #mess{
-    padding-left: 5%;
-    width: 40%;
+    width: 80%;
     height: 100%;
-    border-bottom: 2px solid white;
+    border-bottom: 2px solid rgb(19, 18, 18);
 }
 
 #dev #mess #developer{
     height: 100%;
     width: 100%;
     display: flex;
-    flex-direction: column;
-    gap: 8%;
-}
-
-#dev #mess #developer #nameplate{
-    display: flex;
-    flex-direction: row;
     align-items: center;
-    gap: 2%;
-
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 2.5%;
+    /* background-color: red; */
 }
 
-#dev #mess #developer #nameplate #pic{
-    height: 70px;
-    width: 70px;
-    background-color: white;
-    border-radius: 50%;
-    filter: grayscale(100%);
-    background-size: cover;
-    
-}
-
-#dev #mess #developer #nameplate h2{
-    font-size: 2vw;
-    line-height: 25px;
-    color: white;
-
-}
-
-#dev #mess #developer #nameplate h2 #namep{
+#dev #mess #developer .inputing{
+    display: flex;
+    justify-content: center;
+    height: 5vh;
+    width: 30vw;
+    /* background-color: red; */
+    border-radius: 10px;
     font-size: 1vw;
-    color: rgb(200,200,200);
+    text-align: center;
+    border: none;
+    border-left: 5px solid black;
+    border-right: 5px solid black;
+    color: black;
+    outline: none;
+    font-family: "Roboto Mono", monospace;
+    padding: 10px;
 }
+
 
 #dev #mess #developer #review{
-    color: rgb(200, 200, 200);
+    color: rgb(50, 50, 50);
 }
 
 #dev #mess #developer #review h3{
-    font-size: 1.3vw;
+    font-size: 2vw;
     font-weight: 400;
+    text-align: center;
 }
 
 #dev #mess #developer #review h3 .bold{
     font-weight: 800;
-    color: white;
+    color: rgb(0, 0, 0);
 }
 
 #dev #mess #developer #interact{
     display: flex;
+    align-items: flex-end;
     flex-direction: row;
     gap: 2.5%;
 }
 
 #dev #mess #developer #interact #messanger{
-    height: 3vw;
-    width: 60%;
-    border-radius: 10px;
-    background-color: rgb(236, 236, 236);
-    border: none;
+    height: 10vw;
+    width: 60vw;
+    border-radius: 30px;
     font-size: 1.5vw;
-    text-align: center
+    text-align: center;
+    border: none;
+    border-left: 5px solid black;
+    border-right: 5px solid black;
+    color: black;
+    outline: none;
+    font-family: "Roboto Mono", monospace;
+    resize: none; /* Prevents manual resizing */
+    overflow-y: auto; /* Enables scrolling */
+    transition: border 0.3s ease-in-out;
+    word-wrap: break-word; /* Ensures text wraps */
+    white-space: pre-wrap; /* Allows line breaks */
+    padding: 10px;
+    line-height: 1.5;
 }
 
-#dev #mess #developer #interact #sub{
+#dev #mess #developer #sub{
     height: 3vw;
     width: 20%;
     border-radius: 10px;
     font-size: 1.5vw;
     font-weight: 600;
     border: none;
-    background-color: #319F43;
+    background-color: black;
     color: white;
+    transition: all ease .4s;
+}
+
+#dev #mess #developer #sub:hover{
+    cursor: pointer;
+    background-color: rgb(29, 179, 76);
+    color: black;
+    transition: all ease .4s;
 }
