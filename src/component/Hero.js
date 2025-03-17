@@ -15,7 +15,7 @@ const Hero = () => {
                 gsap.fromTo(
                     textRefs.current[index],
                     { text: { value: "0.1.0.1.0.1.", scrambleText: textRefs.current[index].textContent } },
-                    { text: textRefs.current[index].textContent, duration: 5, ease: "power3.out" }
+                    { text: textRefs.current[index].textContent, duration: 5, ease: "power3.out",scrub:3}
                 );
             });
         }, heroRef);

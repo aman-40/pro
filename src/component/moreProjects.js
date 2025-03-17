@@ -12,20 +12,20 @@ const MoreProjects = () => {
 
   useEffect(() => {
     // Fade-in effect for section without initial black screen
-    gsap.fromTo(
-      sectionRef.current,
-      { opacity: 1 }, // Start visible
-      {
-        opacity: 1, // Keep it visible
-        duration: 1,
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: 'top 80%',
-          end: 'top 50%',
-          toggleActions: 'play none none reverse',
-        },
-      }
-    );
+    // gsap.fromTo(
+    //   sectionRef.current,
+    //   { opacity: 1 }, // Start visible
+    //   {
+    //     opacity: 1, // Keep it visible
+    //     duration: 1,
+    //     scrollTrigger: {
+    //       trigger: sectionRef.current,
+    //       start: 'top 80%',
+    //       end: 'top 50%',
+    //       toggleActions: 'play none none reverse',
+    //     },
+    //   }
+    // );
 
     // Title animation from left to right
     gsap.fromTo(
@@ -35,7 +35,7 @@ const MoreProjects = () => {
         x: 0,
         opacity: 1,
         duration: 1,
-        ease: 'power3.out',
+        ease: 'none',
         scrollTrigger: {
           trigger: titleRef.current,
           start: 'top 60%',
@@ -44,29 +44,26 @@ const MoreProjects = () => {
         },
       }
     );
+    
 
     // Individual project item animations
     projectItemsRef.current.forEach((item, index) => {
       gsap.fromTo(
         item,
-        { filter: 'blur(10px)', scale: 1 },
-        {
-          filter: 'blur(0px)',
-          scale: 1.2,
-          duration: 1,
-          scrollTrigger: {
-            trigger: item,
-            start: 'top 80%',
-            end: 'top 10%',
-            scrub: true,
-            onUpdate: (self) => {
-              const progress = self.progress;
-              const blurValue = progress < 0.5 || progress > 0.9 ? 10 : 0;
-              const scaleValue = progress >= 0.5 && progress <= 0.9 ? 1.1 : 1;
-              gsap.to(item, { filter: `blur(${blurValue}px)`, scale: scaleValue, duration: 0.3 });
-            },
-          },
-        }
+        { x: 150, opacity: 0 },
+      {
+        x: -50,
+        opacity: 1,
+        duration: 1,
+        ease: 'bounce.out',
+        scrollTrigger: {
+          trigger: item,
+          start: 'top 80%',
+          end: 'top 50%',
+          scrub: true,
+          markers:false,
+        },
+      }
       );
     });
   }, []);

@@ -9,6 +9,14 @@
     padding-top: 3%;
     padding-bottom: 3%;
     padding-right: 1%;
+
+}
+
+.qmark{
+  font-size: 70vh;
+  /* background-color: grey; */
+  width: 30%;
+  text-align: center;
 }
 .question .faq-container {
     width: 70%;
@@ -17,6 +25,7 @@
     font-family: "Inconsolata", serif, serif;
     display: flex;
     flex-direction: column;
+    /* background-color: red;  */
 
   }
   

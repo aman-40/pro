@@ -1,5 +1,10 @@
-import React, { useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import "./question.css";
+
+// Register ScrollTrigger plugin
+gsap.registerPlugin(ScrollTrigger);
 
 const faqData = [
     { question: "DO YOU DO WEB DESIGN OR WEB DEVELOPMENT?", answer: "I do both web design and web development." },
@@ -13,19 +18,39 @@ const faqData = [
 
 const Question = () => {
     const [openIndex, setOpenIndex] = useState(null);
+    const qmarkRef = useRef(null);
+
+    useEffect(() => {
+        if (qmarkRef.current) {
+            gsap.fromTo(qmarkRef.current,
+                { scale: 0, opacity: 0 },
+                {
+                    scale: 1,
+                    opacity: 1,
+                    duration: 1,
+                    ease: 'none',
+                    scrollTrigger: {
+                        trigger: qmarkRef.current,
+                        start: 'top 80%',
+                        end: 'top 60%',
+                        scrub: 3,
+                    },
+                }
+            );
+        }
+    }, []);
 
     const toggleAnswer = (index) => {
         setOpenIndex(openIndex === index ? null : index);
     };
 
-    console.log("Rendering Question component..."); // Debugging
-
     return (
         <div className="question">
+            <h1 className="qmark" ref={qmarkRef}>?</h1>
             <div className="faq-container">
                 <h1 className="faq-title">
                     COMMON
-                    <p className="faq-subtitle">SOME QUESTIONS <br/>PEOPLE USUALLY ASK</p>
+                    <p className="faq-subtitle">SOME QUESTIONS <br />PEOPLE USUALLY ASK</p>
                 </h1>
                 <h1 className="faq-title">QUESTIONS</h1>
                 <div className="faq-list">

@@ -10,6 +10,8 @@ html,body{
   background-color: black;
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none; /* IE/Edge */
+  /* overflow-x: hidden;
+  overflow-y: auto; */
 
 }
 
