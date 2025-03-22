@@ -42,7 +42,7 @@ const Hero = () => {
                     <div className="logos">
                         <img src="profile/public/logo192.png" alt="Medikit" />
                         <img src="path-to-yahoo-logo" alt="Drinks" />
-                        <img src="path-to-f3-logo" alt="RAMAYANA" />
+                        <img src="path-to-f3-logo" alt="Desire" />
                     </div>
                 </div>
             </div>

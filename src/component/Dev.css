@@ -58,10 +58,17 @@
     /* background-color: red; */
 }
 
-#dev #contact #social{
+
+#dev #contact #social {
     display: flex;
     gap: 10%;
-    font-size: 3vw;
+    padding-top: 2px;
+}
+
+#dev #contact #social a{
+    display: flex;
+    gap: 10%;
+    font-size: 2vw;
 }
 
 #dev #mess{

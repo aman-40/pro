@@ -28,7 +28,7 @@ const About = () => {
             trigger: titleRef.current,
             start: "top 70%",
             end: "top 50%",
-            scrub: 3,
+            scrub: 1,
           },
         }
       );
@@ -47,7 +47,7 @@ const About = () => {
             trigger: textRef.current,
             start: "top 85%",
             end: "bottom 20%", // Animation progresses over this scroll range
-            scrub: 3, // Scroll-based control
+            scrub: 1, // Scroll-based control
           },
         }
       );
@@ -63,7 +63,7 @@ const About = () => {
           <strong>A</strong>bout
         </p>
         <p className="about-text" ref={textRef}>
-          <strong>Aman Kumar</strong> is an independent designer focused on crafting immersive digital experiences.
+          An independent designer focused on crafting immersive digital experiences.
           He believes every project is an opportunity to deliver a unique and memorable digital experience that
           delights users and builds brand equity.
         </p>

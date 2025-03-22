@@ -33,7 +33,7 @@ const Question = () => {
                         trigger: qmarkRef.current,
                         start: 'top 80%',
                         end: 'top 60%',
-                        scrub: 3,
+                        scrub: 1,
                     },
                 }
             );

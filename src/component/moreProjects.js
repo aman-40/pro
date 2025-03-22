@@ -75,9 +75,14 @@ const MoreProjects = () => {
           More <div className='pro'>Projects</div>
         </div>
         <ul className="projects-list">
-          {['MEDIKIT', 'DRINKS', 'RAMAYANA', 'MAHABHARAT'].map((project, index) => (
-            <a key={index} href={index < 2 ? `https://${project.toLowerCase()}-unfinished.web.app/` : '#'} target='_blank' rel='noopener noreferrer'>
-              <li className="project-item" ref={el => projectItemsRef.current[index] = el}>{project}</li>
+          {[
+            { name: 'MEDIKIT', link: 'https://medikit-247.web.app/' },
+            { name: 'DRINKS', link: 'https://drinks-unfinished.web.app/' },
+            { name: 'DESIRE', link: "" },
+            { name: 'MAHABHARAT', link: 'https://mahabharat-unfinished.web.app/' }
+          ].map((project, index) => (
+            <a key={index} href={project.link} target='_blank' rel='noopener noreferrer'>
+              <li className="project-item" ref={el => projectItemsRef.current[index] = el}>{project.name}</li>
             </a>
           ))}
         </ul>

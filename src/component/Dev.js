@@ -4,7 +4,8 @@ import { FaInstagram, FaGithub, FaFacebook, FaLinkedin } from 'react-icons/fa';
 import gsap from 'gsap';
 import SplitType from 'split-type';
 import emailjs from '@emailjs/browser'; 
-function Dev() {
+
+export const Dev = () =>{
     const reviewRef = useRef(null);
 
     useEffect(() => {
@@ -26,27 +27,34 @@ function Dev() {
         );
     }, []);
 
-    const sentEmail = (e) => {
-        e.preventDefault();
-        alert('Your message has been sent successfully');
-        emailjs.sendForm(process.env.REACT_APP_SERVICE_ID,process.env.REACT_APP_TEMPLATE_ID, e.target, process.env.REACT_APP_PUBLIC_KEY)
-        .then((response) => {
-            console.log("Email sent successfully:", response);
-          })
-          .catch((error) => {
-            console.error("Email sending failed:", error); // Log the full error object
-          });
-    }
+    const form = useRef();
+
+  const sentEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(process.env.REACT_APP_SERVICE_ID, process.env.REACT_APP_TEMPLATE_ID, form.current, {
+        publicKey: process.env.REACT_APP_PUBLIC_KEY,
+      })
+      .then(
+        () => {
+          alert('SUCCESS!');
+        },
+        (error) => {
+          alert('FAILED...', error.text);
+        },
+      );
+  };
 
     return (
         <div id='dev'>
             <div id="mess">
-                <form id="developer" onSubmit={sentEmail}>
+                <form id="developer" onSubmit={sentEmail} ref={form}>
                     <div id="review" ref={reviewRef}>
                         <h3>Give <span className='bold'>review</span> or <span className='bold'>interesting ideas</span> straight to my inbox.</h3>
                     </div>
-                    <input className='inputing' type='name' name='namef' placeholder='Your Name' />
-                    <input className='inputing' type='email' name='emailf' placeholder='Your Gmail' />
+                    <input className='inputing' type='name' name='name' placeholder='Your Name' />
+                    <input className='inputing' type='email' name='email' placeholder='Your Gmail' />
                     <div id="interact">
                         <textarea type="text" placeholder='Enter Your Message' name="message" id="messanger" />
                     </div>
@@ -55,10 +63,21 @@ function Dev() {
             </div>
             <div id="contact">
                 <div id="social">
+                    <a href='https://github.com/amannu113114' target='_blank'> 
                     <FaGithub className='circle-icon github' />
+                    </a>
+                    <a href='https://www.instagram.com/a_m_a_n.035/ ' target='_blank'>  
                     <FaInstagram className='circle-icon insta' />
+
+                    </a>
+                    <a href='https://www.facebook.com/profile.php?id=100041928604077' target='_blank'>      
                     <FaFacebook className='circle-icon fb' />
+
+                    </a>
+                    <a href='https://www.linkedin.com/in/unfinished-aman/' target='_blank'> 
                     <FaLinkedin className='circle-icon ld' />
+
+                    </a>
                 </div>
             </div>
         </div>
