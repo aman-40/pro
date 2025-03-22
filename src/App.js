@@ -9,12 +9,14 @@ import Question from './component/Question'
 import Footer from './component/Footer'
 import Dev from './component/Dev'
 import ThemeToggle from './component/ThemeToggle'
+import Overlays from './component/Overlays'
 
 
 function App() {
   return (
     <>
     {/* <Loading></Loading> */}
+    <Overlays></Overlays>
     <Hero></Hero>
     <About></About>
     {/* here is the highlights */}
