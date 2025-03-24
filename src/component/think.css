@@ -1,3 +1,10 @@
+#think{
+  background-color: white;
+  position: sticky;
+  top: -35%;
+
+}
+
 .think-container {
     display: flex;
     flex-direction: column;
@@ -8,30 +15,35 @@
     justify-content: flex-end;
     align-items: flex-start;
     line-height: .8;
-    padding-left: 5%;
+    border-top: 5px dashed black;
+    position: sticky;
+    top: 0;
+    /* background-color: red; */
   }
   
   .think-container .title {
+    padding-left: 5%;
     display: flex;
 
     font-size: 18vh;
     font-weight: 500;
-    /* background-color: red; */
     width: 60%;
     /* animation: showWritten2 both;
     animation-timeline: view(70% 10%); */
     
   }
-
+  
   /* @keyframes showWritten2 {
     from{
       opacity: 0;
       transform: translateX(-200px);
-    }  
-    to{
-      opacity: 1;
-      transform: translateX(0);
-    }  
+      }  
+      to{
+        opacity: 1;
+        transform: translateX(0);
+        }  
+        background-color: black;
+        color: white;
   } */
 
   .think-container .titleflex{
@@ -68,7 +80,8 @@
     justify-content: center;
     align-items: center;
     line-height: .8;
-    /* background-color: red; */
+    position: sticky;
+    top: 0;
   }
 
   .think-card .process-cards {

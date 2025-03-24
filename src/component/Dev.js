@@ -49,14 +49,14 @@ export const Dev = () =>{
     return (
         <div id='dev'>
             <div id="mess">
-                <form id="developer" onSubmit={sentEmail} ref={form}>
+                <form id="developer" onSubmit={sentEmail} ref={form} >
                     <div id="review" ref={reviewRef}>
                         <h3>Give <span className='bold'>review</span> or <span className='bold'>interesting ideas</span> straight to my inbox.</h3>
                     </div>
-                    <input className='inputing' type='name' name='name' placeholder='Your Name' />
-                    <input className='inputing' type='email' name='email' placeholder='Your Gmail' />
+                    <input className='inputing' type='name' name='name' placeholder='Your Name' required/>
+                    <input className='inputing' type='email' name='email' placeholder='Your Gmail' required/>
                     <div id="interact">
-                        <textarea type="text" placeholder='Enter Your Message' name="message" id="messanger" />
+                        <textarea type="text" placeholder='Enter Your Message' name="message" id="messanger" required/>
                     </div>
                     <button type="submit" id='sub'>Send</button>
                 </form>

@@ -76,7 +76,7 @@ const Think = () => {
     }, []);
 
     return (
-        <>
+        <div id="think">
             <div className="think-container">
                 <h1 className="title" ref={titleRef}>THOUGHTFUL</h1>
                 <h1 className="title titleflex" ref={titleFlexRef}>
@@ -100,7 +100,7 @@ const Think = () => {
                     ))}
                 </div>
             </div>
-        </>
+        </div>
     );
 };
 

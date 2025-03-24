@@ -9,6 +9,8 @@
     padding-top: 3%;
     padding-bottom: 3%;
     padding-right: 1%;
+    position: sticky;
+  top: 0;
 
 }
 
