@@ -7,8 +7,8 @@
     align-items: center;
     justify-content: center;
     font-family: "Inconsolata" , serif;
-    position: sticky;
-  top: 0;
+    /* position: sticky;
+  top: 0; */
 }
 
 .identity .testimonial-card {

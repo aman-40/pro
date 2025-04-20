@@ -10,8 +10,8 @@
     position: relative;
     font-family: "Inconsolata", serif, serif;
     border-bottom: 5px dashed black;
-    position: sticky;
-    top: 0;
+    /* position: sticky;
+    top: 0; */
     border-top: 5px dashed black;
     
 }

@@ -12,8 +12,8 @@
     flex-direction: column;
     font-family: "Roboto Mono", monospace;
     /* padding-bottom: 5px; */
-    position: sticky;
-  top: 0;
+    /* position: sticky;
+  top: 0; */
 }
 
 .circle-icon{

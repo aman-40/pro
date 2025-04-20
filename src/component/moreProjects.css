@@ -12,8 +12,8 @@
   border-top: 5px dashed black;
   border-bottom: 5px dashed black;
   font-family: "Inconsolata", serif, serif;
-  position: sticky;
-  top: 0;
+  /* position: sticky;
+  top: 0; */
 }
 
 .more-projects-container .more-projects-content {

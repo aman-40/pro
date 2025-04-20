@@ -1,7 +1,7 @@
 #think{
   background-color: white;
-  position: sticky;
-  top: -35%;
+  /* position: sticky;
+  top: -35%; */
 
 }
 
@@ -16,8 +16,8 @@
     align-items: flex-start;
     line-height: .8;
     border-top: 5px dashed black;
-    position: sticky;
-    top: 0;
+    /* position: sticky;
+    top: 0; */
     /* background-color: red; */
   }
   

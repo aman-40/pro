@@ -9,8 +9,8 @@
   padding-left: 10vw;
   background-color: white;
   font-family: "Inconsolata", serif, serif;
-  position: sticky;
-  top: 0;
+  /* position: sticky;
+  top: 0; */
   border-top: 5px dashed black;
   border-bottom: 5px dashed black;
   /* opacity: 0;
