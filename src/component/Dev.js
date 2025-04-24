@@ -63,7 +63,7 @@ export const Dev = () =>{
             </div>
             <div id="contact">
                 <div id="social">
-                    <a href='https://github.com/amannu113114' target='_blank'> 
+                    <a href='https://github.com/aman-40' target='_blank'> 
                     <FaGithub className='circle-icon github' />
                     </a>
                     <a href='https://www.instagram.com/a_m_a_n.035/ ' target='_blank'>  
