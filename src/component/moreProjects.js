@@ -78,7 +78,7 @@ const MoreProjects = () => {
           {[
             { name: 'MEDIKIT', link: 'https://medikit-247.web.app/' },
             { name: 'DRINKS', link: 'https://drinks-unfinished.web.app/' },
-            { name: 'DESIRE', link: "" },
+            { name: 'DESIRE', link: "https://aman-40.github.io/Unfinished-Desire" },
             { name: 'MAHABHARAT', link: 'https://mahabharat-unfinished.web.app/' }
           ].map((project, index) => (
             <a key={index} href={project.link} target='_blank' rel='noopener noreferrer'>
