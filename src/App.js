@@ -10,6 +10,7 @@ import Footer from './component/Footer'
 import Dev from './component/Dev'
 import ThemeToggle from './component/ThemeToggle'
 import Overlays from './component/Overlays'
+import Numbers from './component/Numbers'
 
 
 function App() {
@@ -21,8 +22,9 @@ function App() {
     <About></About>
     {/* here is the highlights */}
     <MoreProjects></MoreProjects>
+  <Numbers></Numbers>
     <Think></Think>
-    <Identity></Identity>
+    {/* <Identity></Identity> */}
     <Question></Question>
     <Dev></Dev>
     {/* <Footer></Footer>     */}

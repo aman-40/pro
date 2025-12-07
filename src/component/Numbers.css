@@ -1,0 +1,62 @@
+/* Numbers section styles - match dark themed aesthetic */
+.numbers-section{
+  width:100%;
+  /* make transparent so it inherits the app background (light/dark theme aware) */
+  background: white;
+  padding: 6vh 10vw;
+  box-sizing: border-box;
+  color: var(--text-color, #fff);
+  font-family: 'Montserrat', sans-serif;
+}
+.numbers-inner{
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+.numbers-title{
+  font-size: 10vh;
+  letter-spacing: 3px;
+  margin-bottom: 4vh;
+  font-weight: 800;
+}
+.numbers-grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2vw;
+  align-items: center;
+}
+.number-card{
+  /* keep cards semi-transparent so they sit on top of the page background */
+  background: rgba(255, 255, 255, 0.35);
+  border: 2px solid rgb(0, 0, 0);
+  padding: 6vh 2vw;
+  min-height: 30vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  /* start a bit lower and invisible — GSAP will animate to visible */
+  transform: translateY(20px);
+  opacity: 0;
+}
+.number-value{
+  font-size: 8vh;
+  color: black;
+  /* teal stroke consistent with theme */
+  /* -webkit-text-stroke: 5px #000000; */
+  font-weight: 800;
+  margin-bottom: 3vh;
+}
+.number-value .plus{
+  font-size: .6em;
+  /* -webkit-text-stroke: 5px #000000; */
+}
+.number-sub{
+  color: rgb(0, 0, 0);
+  font-size: 3vh;
+}
+
+@media (max-width: 900px){
+  .numbers-grid{grid-template-columns: 1fr;}
+  .number-value{font-size: 10vh}
+}
