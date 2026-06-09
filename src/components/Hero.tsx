@@ -2,8 +2,11 @@ import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FileText } from 'lucide-react';
 import { FaGithub, FaLinkedin, FaInstagram, FaFacebook } from 'react-icons/fa';
+import { GitHubCalendar } from 'react-github-calendar';
+
 
 const ROLES = [
+  "Freelancer",
   "Frontend Developer",
   "MERN Stack Developer",
   "Full Stack Developer",
@@ -81,22 +84,29 @@ const Hero = () => {
       </div>
       
       {/* GitHub Activity Graph (Right Side) */}
-      <div className="hidden lg:flex relative justify-end pl-4 w-full max-w-[450px]">
-        <div className="bg-black/40 border border-white/10 rounded-2xl backdrop-blur-md p-3 overflow-hidden shadow-2xl group hover:border-primary/30 transition-all duration-500 w-full relative">
+      <div className="hidden lg:flex relative justify-end pl-4 w-full max-w-[550px]">
+        <div className="bg-black/40 border border-white/10 rounded-2xl backdrop-blur-md p-4 overflow-hidden shadow-2xl group hover:border-primary/30 transition-all duration-500 w-full relative">
           <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-transparent to-secondary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
           
-          <div className="flex items-center justify-between mb-2 px-1">
+          <div className="flex items-center justify-between mb-3 px-1">
             <h4 className="text-xs font-bold text-gray-300 tracking-wider flex items-center gap-2">
               <FaGithub className="text-white" />
-              CONTRIBUTION ACTIVITY
+              GITHUB CONTRIBUTIONS
             </h4>
           </div>
           
-          <img 
-            src="https://github-readme-activity-graph.vercel.app/graph?username=aman-40&theme=react-dark&hide_border=true&bg_color=transparent&hide_title=true" 
-            alt="GitHub Contributions" 
-            className="w-full h-auto object-contain opacity-80 group-hover:opacity-100 transition-opacity duration-500 drop-shadow-[0_0_15px_rgba(0,212,255,0.2)]"
-          />
+          <div className="w-full overflow-x-auto custom-scrollbar pb-2 text-gray-300 relative z-10">
+            <GitHubCalendar 
+              username="aman-40" 
+              colorScheme="dark"
+              blockSize={10}
+              blockMargin={4}
+              fontSize={10}
+              theme={{
+                dark: ['rgba(255,255,255,0.05)', 'rgba(0,212,255,0.3)', 'rgba(0,212,255,0.6)', 'rgba(0,212,255,0.8)', '#00D4FF'],
+              }}
+            />
+          </div>
         </div>
       </div>
     </div>

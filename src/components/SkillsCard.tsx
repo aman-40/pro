@@ -3,18 +3,43 @@ import { motion } from 'framer-motion';
 const SKILL_CATEGORIES = [
   {
     title: "Frontend",
-    skills: ["React", "TypeScript", "JavaScript", "Tailwind CSS", "GSAP", "Framer Motion"],
+    skills: ["React.js", "TypeScript", "JavaScript", "HTML5", "CSS3", "Tailwind CSS", "GSAP", "Framer Motion", "Responsive Design"],
     color: "bg-blue-500/20 text-blue-300 border-blue-500/30"
   },
   {
     title: "Backend",
-    skills: ["Node.js", "Express.js", "MongoDB", "Supabase"],
+    skills: ["Node.js", "Express.js", "REST APIs", "JWT"],
     color: "bg-green-500/20 text-green-300 border-green-500/30"
   },
   {
-    title: "Tools",
-    skills: ["Git", "GitHub", "VS Code", "Postman", "Vercel", "Railway"],
+    title: "Database",
+    skills: ["MongoDB", "MySQL", "Supabase"],
+    color: "bg-teal-500/20 text-teal-300 border-teal-500/30"
+  },
+  {
+    title: "Programming Languages",
+    skills: ["C++", "Python", "JavaScript", "TypeScript"],
+    color: "bg-amber-500/20 text-amber-300 border-amber-500/30"
+  },
+  {
+    title: "Tools & Platforms",
+    skills: ["Git", "GitHub", "Postman", "Vercel", "Railway", "Linux"],
     color: "bg-purple-500/20 text-purple-300 border-purple-500/30"
+  },
+  {
+    title: "Cloud & AI",
+    skills: ["Microsoft Azure AI", "AI Integration"],
+    color: "bg-cyan-500/20 text-cyan-300 border-cyan-500/30"
+  },
+  {
+    title: "Development Areas",
+    skills: ["Full-Stack", "PWA", "UI/UX", "API Integration"],
+    color: "bg-pink-500/20 text-pink-300 border-pink-500/30"
+  },
+  {
+    title: "Other Interests",
+    skills: ["Machine Learning", "Data Science", "Cybersecurity", "Bug Bounty", "Software Engineering"],
+    color: "bg-yellow-500/20 text-yellow-300 border-yellow-500/30"
   }
 ];
 

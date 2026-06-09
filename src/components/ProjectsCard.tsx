@@ -6,28 +6,38 @@ import { FaGithub } from 'react-icons/fa';
 const PROJECTS = [
   {
     title: "Medical Shop Inventory",
-    tech: "React, Node.js, MongoDB",
+    tech: "React, Node.js, PostgreSQL",
     desc: "A comprehensive system for managing medical shop inventory, tracking stock, and automating alerts.",
+    liveLink: "https://mmh-clinic.web.app/",
+    githubLink: "https://github.com/aman-40/medicare"
   },
   {
-    title: "Face Recognition Attendance",
-    tech: "Python, OpenCV, AI",
-    desc: "Automated attendance tracking using facial recognition technology.",
+    title: "College Management System",
+    tech: "React, Vite, Tailwind, Node.js, Express",
+    desc: "A robust platform for college administration, automating student tracking and academic workflows.",
+    liveLink: "https://dce-vert.vercel.app/",
+    githubLink: "https://github.com/harshbuttru3/dce"
   },
   {
-    title: "Ben 10 Interactive Website",
-    tech: "HTML, CSS, GSAP",
-    desc: "A highly interactive and animated fan website showcasing GSAP animations.",
+    title: "Hospital Management System",
+    tech: "React, Node.js, Express, Firebase",
+    desc: "Comprehensive hospital management platform for efficient patient and staff tracking.",
+    liveLink: "https://medikit-247.web.app/",
+    githubLink: "https://github.com/harshbuttru3/medikit"
   },
   {
-    title: "Bhagavad Gita Digital Book",
-    tech: "React, Tailwind",
-    desc: "A beautifully designed digital reader for the Bhagavad Gita.",
+    title: "SodaCanes",
+    tech: "React, Vite, CSS",
+    desc: "A beautifully animated and highly interactive landing page for a beverage brand.",
+    liveLink: "https://drinks-unfinished.web.app/",
+    githubLink: "https://github.com/aman-40/Soda"
   },
   {
-    title: "TRAMS Project",
-    tech: "Full Stack",
-    desc: "Transit Route and Management System for efficient route planning.",
+    title: "Elementum",
+    tech: "React, Vite, GSAP",
+    desc: "A creative frontend project featuring an interactive and modern user interface.",
+    liveLink: "https://aman-40.github.io/trams/",
+    githubLink: "https://github.com/aman-40/trams"
   }
 ];
 
@@ -63,12 +73,22 @@ const ProjectsCard = () => {
                 >
                   <p className="text-xs md:text-sm text-gray-400 mb-2 md:mb-3 leading-snug">{project.desc}</p>
                   <div className="flex items-center gap-2 md:gap-3">
-                    <button className="flex items-center gap-1 text-[10px] md:text-xs px-2.5 md:px-3 py-1.5 rounded-md bg-primary text-black font-medium hover:bg-white transition-colors">
+                    <a 
+                      href={project.liveLink}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="flex items-center gap-1 text-[10px] md:text-xs px-2.5 md:px-3 py-1.5 rounded-md bg-primary text-black font-medium hover:bg-white transition-colors"
+                    >
                       <ExternalLink size={12} /> Live Demo
-                    </button>
-                    <button className="flex items-center gap-1 text-[10px] md:text-xs px-2.5 md:px-3 py-1.5 rounded-md bg-white/10 hover:bg-white/20 transition-colors">
+                    </a>
+                    <a 
+                      href={project.githubLink}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="flex items-center gap-1 text-[10px] md:text-xs px-2.5 md:px-3 py-1.5 rounded-md bg-white/10 hover:bg-white/20 transition-colors"
+                    >
                       <FaGithub size={12} /> Source
-                    </button>
+                    </a>
                   </div>
                 </motion.div>
               )}
