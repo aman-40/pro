@@ -1,45 +1,49 @@
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+@import "tailwindcss";
+
+@theme {
+  --color-background: #050816;
+  --color-primary: #00D4FF;
+  --color-secondary: #7C3AED;
+  --color-card: rgba(255, 255, 255, 0.05);
+  
+  --animate-glow: glow 3s ease-in-out infinite alternate;
+
+  @keyframes glow {
+    0% { box-shadow: 0 0 5px rgba(0, 212, 255, 0.2); }
+    100% { box-shadow: 0 0 20px rgba(0, 212, 255, 0.6), 0 0 40px rgba(124, 58, 237, 0.4); }
+  }
 }
 
-html,body{
-  height: 100vh;
-  width: 100%;
-  background-color: black;
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* IE/Edge */
-  /* overflow-x: hidden;
-  overflow-y: auto; */
-
-}
-
-::-webkit-scrollbar {
-  display: none;
-}
-
-:root {
-  --bg-color: #ffffff;
-  --text-color: #000000;
-}
-
-[data-theme="dark"] {
-  --bg-color: #121212;
-  --text-color: #ffffff;
+@layer utilities {
+  .glass {
+    @apply bg-card backdrop-blur-md border border-white/10 shadow-[0_4px_30px_rgba(0,0,0,0.1)];
+  }
+  
+  .glass-hover {
+    @apply hover:bg-white/10 hover:border-primary/50 transition-all duration-300;
+  }
+  
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary;
+  }
 }
 
 body {
-  background-color: var(--bg-color);
-  color: var(--text-color);
-  transition: all 0.3s ease-in-out;
+  cursor: none; /* Hide default cursor for custom cursor */
 }
 
-.theme-toggle-btn {
-  padding: 8px 16px;
-  background: var(--text-color);
-  color: var(--bg-color);
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
+/* Custom Scrollbar for inner elements if needed, but overall body should have no scroll */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.4);
 }
