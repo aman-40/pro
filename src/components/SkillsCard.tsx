@@ -46,21 +46,21 @@ const SKILL_CATEGORIES = [
 const SkillsCard = () => {
   return (
     <div className="w-full h-full flex flex-col">
-      <h3 className="text-lg md:text-xl font-bold mb-2 md:mb-3 flex items-center gap-2">
+      <h3 className="text-xl md:text-xl font-bold mb-3 md:mb-3 flex items-center gap-2">
         <span className="w-2 h-2 rounded-full bg-secondary" />
         Technical Skills
       </h3>
       
-      <div className="flex-1 overflow-y-auto custom-scrollbar flex flex-col gap-3 md:gap-4">
+      <div className="flex-1 overflow-y-auto custom-scrollbar flex flex-col gap-4 md:gap-4">
         {SKILL_CATEGORIES.map((category, idx) => (
-          <div key={idx} className="flex flex-col gap-1.5 md:gap-2">
-            <h4 className="text-xs md:text-sm font-medium text-gray-400">{category.title}</h4>
-            <div className="flex flex-wrap gap-1.5 md:gap-2">
+          <div key={idx} className="flex flex-col gap-2 md:gap-2">
+            <h4 className="text-sm md:text-sm font-medium text-gray-400">{category.title}</h4>
+            <div className="flex flex-wrap gap-2 md:gap-2">
               {category.skills.map((skill, sIdx) => (
                 <motion.span
                   key={sIdx}
                   whileHover={{ scale: 1.05, y: -2 }}
-                  className={`text-[10px] md:text-xs px-2.5 py-1 md:px-3 md:py-1.5 rounded-full border backdrop-blur-sm cursor-default ${category.color} transition-colors hover:brightness-125`}
+                  className={`text-xs md:text-xs px-3 py-1.5 md:px-3 md:py-1.5 rounded-full border backdrop-blur-sm cursor-default ${category.color} transition-colors hover:brightness-125`}
                 >
                   {skill}
                 </motion.span>

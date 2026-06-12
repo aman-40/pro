@@ -59,8 +59,8 @@ const ProjectsCard = () => {
             onMouseEnter={() => setHoveredIndex(idx)}
             onMouseLeave={() => setHoveredIndex(null)}
           >
-            <h4 className="font-semibold text-base md:text-lg leading-tight">{project.title}</h4>
-            <p className="text-[10px] md:text-xs text-primary mt-1 mb-1.5 md:mb-2 font-mono">{project.tech}</p>
+            <h4 className="font-bold text-lg md:text-lg leading-tight">{project.title}</h4>
+            <p className="text-xs md:text-xs text-primary mt-1 mb-2 md:mb-2 font-mono">{project.tech}</p>
             
             <AnimatePresence>
               {hoveredIndex === idx && (
@@ -71,23 +71,23 @@ const ProjectsCard = () => {
                   transition={{ duration: 0.3 }}
                   className="overflow-hidden"
                 >
-                  <p className="text-xs md:text-sm text-gray-400 mb-2 md:mb-3 leading-snug">{project.desc}</p>
-                  <div className="flex items-center gap-2 md:gap-3">
+                  <p className="text-sm md:text-sm text-gray-400 mb-3 md:mb-3 leading-snug">{project.desc}</p>
+                  <div className="flex items-center gap-3 md:gap-3">
                     <a 
                       href={project.liveLink}
                       target="_blank"
                       rel="noreferrer"
-                      className="flex items-center gap-1 text-[10px] md:text-xs px-2.5 md:px-3 py-1.5 rounded-md bg-primary text-black font-medium hover:bg-white transition-colors"
+                      className="flex items-center gap-1.5 md:gap-1 text-xs md:text-xs px-4 py-2 md:px-3 md:py-1.5 rounded-md bg-primary text-black font-medium hover:bg-white transition-colors"
                     >
-                      <ExternalLink size={12} /> Live Demo
+                      <ExternalLink size={14} className="md:w-3 md:h-3" /> Live Demo
                     </a>
                     <a 
                       href={project.githubLink}
                       target="_blank"
                       rel="noreferrer"
-                      className="flex items-center gap-1 text-[10px] md:text-xs px-2.5 md:px-3 py-1.5 rounded-md bg-white/10 hover:bg-white/20 transition-colors"
+                      className="flex items-center gap-1.5 md:gap-1 text-xs md:text-xs px-4 py-2 md:px-3 md:py-1.5 rounded-md bg-white/10 hover:bg-white/20 transition-colors"
                     >
-                      <FaGithub size={12} /> Source
+                      <FaGithub size={14} className="md:w-3 md:h-3" /> Source
                     </a>
                   </div>
                 </motion.div>

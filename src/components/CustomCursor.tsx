@@ -66,7 +66,7 @@ const CustomCursor = () => {
   }, []);
 
   return (
-    <>
+    <div className="hidden md:block">
       <div
         ref={glowRef}
         className="fixed top-0 left-0 w-64 h-64 -mt-32 -ml-32 rounded-full bg-primary/20 blur-[80px] pointer-events-none z-[9998] transition-opacity"
@@ -99,7 +99,7 @@ const CustomCursor = () => {
         ref={cursorRef}
         className="fixed top-0 left-0 w-8 h-8 -mt-4 -ml-4 rounded-full bg-white mix-blend-difference pointer-events-none z-[10000] shadow-[0_0_15px_rgba(255,255,255,0.9)]"
       />
-    </>
+    </div>
   );
 };
 

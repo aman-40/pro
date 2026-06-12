@@ -13,16 +13,17 @@ function App() {
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    const isMobile = window.innerWidth < 768;
     const ctx = gsap.context(() => {
       // Entrance animation
       gsap.fromTo(
         '.bento-item',
-        { y: 50, opacity: 0 },
+        { y: isMobile ? 20 : 50, opacity: 0 },
         {
           y: 0,
           opacity: 1,
-          duration: 0.8,
-          stagger: 0.1,
+          duration: isMobile ? 0.4 : 0.8,
+          stagger: isMobile ? 0.05 : 0.1,
           ease: 'power3.out',
         }
       );
@@ -32,7 +33,7 @@ function App() {
   }, []);
 
   return (
-    <div className="relative w-full h-screen overflow-hidden bg-background">
+    <div className="relative w-full min-h-screen overflow-x-hidden overflow-y-auto md:h-screen md:overflow-hidden bg-background">
       <ParticleBackground />
       <CustomCursor />
       <ContactModal />
@@ -43,7 +44,7 @@ function App() {
       */}
       <main 
         ref={containerRef}
-        className="relative z-10 w-full h-full max-w-7xl mx-auto p-3 md:p-4 lg:p-5 flex flex-col md:grid md:grid-cols-4 md:grid-rows-[1.2fr_1.1fr_1.1fr_1.2fr] gap-3 md:gap-4"
+        className="relative z-10 w-full md:h-full max-w-7xl mx-auto p-4 md:p-4 lg:p-5 flex flex-col md:grid md:grid-cols-4 md:grid-rows-[1.2fr_1.1fr_1.1fr_1.2fr] gap-4 md:gap-4"
       >
         {/* Top Hero Section */}
         <section className="bento-item glass rounded-2xl md:rounded-3xl p-4 md:p-5 md:col-span-4 md:row-span-1 flex items-center justify-between">
