@@ -318,19 +318,33 @@ const SpiderCursor = ({ mouse }: { mouse: React.MutableRefObject<{ x: number, y:
 const CustomCursor = ({ loading }: { loading?: boolean }) => {
   const [mode, setMode] = useState<Mode>('car');
   const mouseRef = useRef({ x: -1000, y: -1000 }); // Hide initially offscreen
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
+  useEffect(() => {
+    if (isMobile) return;
+    
     // Inject the theme into the document element dynamically
     document.documentElement.setAttribute('data-theme', mode);
-  }, [mode]);
+  }, [mode, isMobile]);
 
   useEffect(() => {
+    if (isMobile) return;
+
     const onMouseMove = (e: MouseEvent) => {
       mouseRef.current = { x: e.clientX, y: e.clientY };
     };
     window.addEventListener('mousemove', onMouseMove);
     return () => window.removeEventListener('mousemove', onMouseMove);
-  }, []);
+  }, [isMobile]);
+
+  if (isMobile) return null; // Completely disable custom cursors and navbar on mobile devices
 
   return (
     <>
