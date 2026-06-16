@@ -1,9 +1,29 @@
 @import "tailwindcss";
 
+:root {
+  --theme-primary: #00D4FF;
+  --theme-secondary: #7C3AED;
+}
+
+[data-theme="ufo"] {
+  --theme-primary: #39FF14;
+  --theme-secondary: #00FFFF;
+}
+
+[data-theme="snake"] {
+  --theme-primary: #FF00FF;
+  --theme-secondary: #00E5FF;
+}
+
+[data-theme="spider"] {
+  --theme-primary: #FF0040;
+  --theme-secondary: #FF5E00;
+}
+
 @theme {
   --color-background: #050816;
-  --color-primary: #00D4FF;
-  --color-secondary: #7C3AED;
+  --color-primary: var(--theme-primary);
+  --color-secondary: var(--theme-secondary);
   --color-card: rgba(255, 255, 255, 0.05);
   
   --animate-glow: glow 3s ease-in-out infinite alternate;
@@ -28,11 +48,38 @@
   }
 }
 
-body {
-  cursor: none; /* Hide default cursor for custom cursor */
+/* Base cursor (Car) */
+* {
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cpath d='M2 2 L26 10 L16 14 L12 26 Z' fill='%2300D4FF' stroke='%23ffffff' stroke-width='1.5' filter='drop-shadow(0 0 4px %2300D4FF)'/%3E%3C/svg%3E") 2 2, auto !important;
+}
+a, button, [role="button"], input, select, textarea, a *, button * {
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cpath d='M2 2 L26 10 L16 14 L12 26 Z' fill='%237C3AED' stroke='%23ffffff' stroke-width='1.5' filter='drop-shadow(0 0 6px %237C3AED)'/%3E%3C/svg%3E") 2 2, pointer !important;
 }
 
-/* Custom Scrollbar for inner elements if needed, but overall body should have no scroll */
+/* UFO Theme Cursor */
+[data-theme="ufo"] * {
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cpath d='M2 2 L26 10 L16 14 L12 26 Z' fill='%2339FF14' stroke='%23ffffff' stroke-width='1.5' filter='drop-shadow(0 0 4px %2339FF14)'/%3E%3C/svg%3E") 2 2, auto !important;
+}
+[data-theme="ufo"] a, [data-theme="ufo"] button, [data-theme="ufo"] [role="button"], [data-theme="ufo"] input, [data-theme="ufo"] select, [data-theme="ufo"] textarea, [data-theme="ufo"] a *, [data-theme="ufo"] button * {
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cpath d='M2 2 L26 10 L16 14 L12 26 Z' fill='%2300FF00' stroke='%23ffffff' stroke-width='1.5' filter='drop-shadow(0 0 6px %2300FF00)'/%3E%3C/svg%3E") 2 2, pointer !important;
+}
+
+/* Snake Theme Cursor */
+[data-theme="snake"] * {
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cpath d='M2 2 L26 10 L16 14 L12 26 Z' fill='%23FF00FF' stroke='%23ffffff' stroke-width='1.5' filter='drop-shadow(0 0 4px %23FF00FF)'/%3E%3C/svg%3E") 2 2, auto !important;
+}
+[data-theme="snake"] a, [data-theme="snake"] button, [data-theme="snake"] [role="button"], [data-theme="snake"] input, [data-theme="snake"] select, [data-theme="snake"] textarea, [data-theme="snake"] a *, [data-theme="snake"] button * {
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cpath d='M2 2 L26 10 L16 14 L12 26 Z' fill='%23FF66FF' stroke='%23ffffff' stroke-width='1.5' filter='drop-shadow(0 0 6px %23FF66FF)'/%3E%3C/svg%3E") 2 2, pointer !important;
+}
+
+/* Spider Theme Cursor */
+[data-theme="spider"] * {
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cpath d='M2 2 L26 10 L16 14 L12 26 Z' fill='%23FF0040' stroke='%23ffffff' stroke-width='1.5' filter='drop-shadow(0 0 4px %23FF0040)'/%3E%3C/svg%3E") 2 2, auto !important;
+}
+[data-theme="spider"] a, [data-theme="spider"] button, [data-theme="spider"] [role="button"], [data-theme="spider"] input, [data-theme="spider"] select, [data-theme="spider"] textarea, [data-theme="spider"] a *, [data-theme="spider"] button * {
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cpath d='M2 2 L26 10 L16 14 L12 26 Z' fill='%231A1A24' stroke='%23FF0040' stroke-width='1.5' filter='drop-shadow(0 0 6px %23FF0040)'/%3E%3C/svg%3E") 2 2, pointer !important;
+}
+
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;

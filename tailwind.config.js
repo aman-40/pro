@@ -8,8 +8,8 @@ export default {
     extend: {
       colors: {
         background: '#050816',
-        primary: '#00D4FF',
-        secondary: '#7C3AED',
+        primary: 'var(--color-primary)',
+        secondary: 'var(--color-secondary)',
         card: 'rgba(255, 255, 255, 0.05)',
       },
       fontFamily: {

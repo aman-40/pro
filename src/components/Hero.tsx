@@ -108,7 +108,13 @@ const Hero = () => {
                 blockMargin={4}
                 fontSize={10}
                 theme={{
-                  dark: ['rgba(255,255,255,0.05)', 'rgba(0,212,255,0.3)', 'rgba(0,212,255,0.6)', 'rgba(0,212,255,0.8)', '#00D4FF'],
+                  dark: [
+                    'rgba(255,255,255,0.05)', 
+                    'color-mix(in srgb, var(--theme-primary) 30%, transparent)', 
+                    'color-mix(in srgb, var(--theme-primary) 60%, transparent)', 
+                    'color-mix(in srgb, var(--theme-primary) 80%, transparent)', 
+                    'var(--theme-primary)'
+                  ],
                 }}
               />
             </div>

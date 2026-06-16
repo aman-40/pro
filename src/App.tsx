@@ -1,5 +1,7 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
+import { AnimatePresence } from 'framer-motion';
+import Loader from './components/Loader';
 import Hero from './components/Hero';
 import ProjectsCard from './components/ProjectsCard';
 import SkillsCard from './components/SkillsCard';
@@ -10,9 +12,20 @@ import ParticleBackground from './components/ParticleBackground';
 import CustomCursor from './components/CustomCursor';
 
 function App() {
+  const [loading, setLoading] = useState(true);
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    // Simulate loading assets or simply a cool entrance
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 2500);
+    return () => clearTimeout(timer);
+  }, []);
+
+  useEffect(() => {
+    if (loading) return; // wait until loading is complete
+
     const isMobile = window.innerWidth < 768;
     const ctx = gsap.context(() => {
       // Entrance animation
@@ -30,12 +43,16 @@ function App() {
     }, containerRef);
 
     return () => ctx.revert();
-  }, []);
+  }, [loading]);
 
   return (
     <div className="relative w-full min-h-screen overflow-x-hidden overflow-y-auto md:h-screen md:overflow-hidden bg-background">
+      <AnimatePresence mode="wait">
+        {loading && <Loader />}
+      </AnimatePresence>
+
       <ParticleBackground />
-      <CustomCursor />
+      <CustomCursor loading={loading} />
       <ContactModal />
       
       {/* 
