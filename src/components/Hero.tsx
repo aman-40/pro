@@ -52,7 +52,7 @@ const Hero = () => {
 
         <div className="flex flex-wrap items-center gap-3 md:gap-3 mt-3 md:mt-2">
           <a 
-            href={`${import.meta.env.BASE_URL}aman-resume.pdf`} 
+            href={`${import.meta.env.BASE_URL}aman.pdf`} 
             target="_blank" 
             rel="noopener noreferrer"
             className="flex items-center gap-2 px-6 py-3 md:px-5 md:py-2.5 rounded-full bg-primary/10 border border-primary/30 text-primary hover:bg-primary/20 hover:border-primary transition-all duration-300 text-base md:text-sm font-medium"
